@@ -1,7 +1,7 @@
 The code in this repository is a support for the experiments in the paper [On a Novel Application of Wasserstein-Procrustes for Unsupervised Cross-Lingual Learning](https://arxiv.org/abs/2007.09456).
 
 # Running directions (GPU required)
-Code [iterative_hungarian](iterative_hungarian.py) takes one initialisation matrix `W_0` and refines it. 
+Code [iterative_hungarian (AVAILABLE SOON)](iterative_hungarian.py) takes one initialisation matrix `W_0` and refines it. 
 
 Experiments from **Section 5.1** are recreated the following way (this example shows English-Spanish):
 1. The source and target embeddings can be downloaded in the following way (change link for other languages):
