@@ -9,9 +9,9 @@ Experiments from **Section 5.1** are recreated the following way (this example s
    - Spanish fastText Wikipedia embeddings: `curl -Lo wiki.es.vec https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.es.vec`
 
 2. Obtaining the initialisation matrix
-   - MUSE (https://github.com/facebookresearch/MUSE): `python unsupervised.py --src_lang en --tgt_lang es --src_emb data/wiki.en.vec --tgt_emb data/wiki.es.vec --n_refinement 5`
-   - Procrustes (https://github.com/facebookresearch/MUSE): `python supervised.py --src_lang en --tgt_lang es --src_emb data/wiki.en.vec --tgt_emb data/wiki.es.vec --n_refinement 5 --dico_train default`
-   - ICP (https://github.com/facebookresearch/Non-adversarialTranslation): 
+   - [MUSE](https://github.com/facebookresearch/MUSE): `python unsupervised.py --src_lang en --tgt_lang es --src_emb data/wiki.en.vec --tgt_emb data/wiki.es.vec --n_refinement 5`
+   - [Procrustes](https://github.com/facebookresearch/MUSE): `python supervised.py --src_lang en --tgt_lang es --src_emb data/wiki.en.vec --tgt_emb data/wiki.es.vec --n_refinement 5 --dico_train default`
+   - [ICP](https://github.com/facebookresearch/Non-adversarialTranslation): 
    `python get_data.py python run_icp.py python eval.py`
 
 3. Running IH:
