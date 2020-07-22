@@ -1,7 +1,8 @@
-# wp-hungarian
-The code in this repository is a support for the experiments in the paper [On a Novel Application of Wasserstein-Procrustes for Unsupervised Cross-Lingual Learning](https://arxiv.org/abs/2007.09456)
-RUNNING DIRECTIONS (GPU is required)
-Code “iterative_hungarian.py” takes one initialisation matrix W_0 and refines it. 
+The code in this repository is a support for the experiments in the paper [On a Novel Application of Wasserstein-Procrustes for Unsupervised Cross-Lingual Learning](https://arxiv.org/abs/2007.09456).
+
+
+#RUNNING DIRECTIONS (GPU is required)
+Code [iterative_hungarian](iterative_hungarian.py) takes one initialisation matrix `W_0` and refines it. 
 
 Experiments from section 5.1 are recreated the following way (this example shows English-Spanish):
 1. Obtaining the initialisation matrix
@@ -27,8 +28,9 @@ Running IH:
 
 These are done via MUSE (https://github.com/facebookresearch/MUSE):
 `python unsupervised.py --src_lang en --tgt_lang es  --src_emb wiki.en.vec --tgt_emb wiki.es.vec --n_refinement 5 —-adversarial False --exp_path PATH —-exp_name TO —-exp_id EXPERIMENT`
-We are assuming the transformation matrix is saved in PATH/TO/EXPERIMENT/best_mapping.pth (MUSE needs non-empty values for —-exp_path, —-exp_name and —-exp_id)
+We are assuming the transformation matrix is saved in `PATH/TO/EXPERIMENT/best_mapping.pth` (MUSE needs non-empty values for `—-exp_path`, `—-exp_name` and `—-exp_id`)
+
 
 Experiments from section 5.2 are recreated the following way:
-1) Word embeddings are obtained using Fasttext following instructions in https://arxiv.org/abs/1805.11222 
-2) `python iterative_hungarian.py —-grows 10000 —-write_path AUX —-src_path PATH_SRC_EMBEDDINGS —-tgt_path PATH_TGT_EMBEDDINGS —-w_path PATH_INITIALIZATION_MATRIX`
+1. Word embeddings are obtained using Fasttext following the instructions in https://arxiv.org/abs/1805.11222 
+2. `python iterative_hungarian.py —-grows 10000 —-write_path AUX —-src_path PATH_SRC_EMBEDDINGS —-tgt_path PATH_TGT_EMBEDDINGS —-w_path PATH_INITIALIZATION_MATRIX`
